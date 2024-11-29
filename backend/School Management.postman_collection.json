@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "a3a4cb5c-6f52-4a7e-a4c1-1c8ce556eb3b",
+		"name": "School Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36187577"
+	},
+	"item": [
+		{
+			"name": "Add school",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"DPS\",\r\n  \"address\": \"Sector-86, Faridabad\",\r\n  \"latitude\": 93.971598,\r\n  \"longitude\": 96.594566\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://school-management-api-blsb.onrender.com/api/addSchool",
+					"protocol": "https",
+					"host": [
+						"school-management-api-blsb",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"addSchool"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all schools based on location",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://school-management-api-blsb.onrender.com/api/listSchools?latitude=22.971598&longitude=67.594566",
+					"protocol": "https",
+					"host": [
+						"school-management-api-blsb",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"listSchools"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "22.971598"
+						},
+						{
+							"key": "longitude",
+							"value": "67.594566"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
